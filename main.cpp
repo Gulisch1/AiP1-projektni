@@ -14,27 +14,401 @@ int main()
         printf("2:Upute\n\n");
         printf("3:Izlaz\n\n");
         scanf("%d", &izbor);
+        printf("\n");
         if (izbor == 1)
         {
-            printf("Započeli ste igru.\n\n");
+            printf("Započeli ste igru.\n\n\n");
 
-            int polje[6][7];
-            char Unesene_Koordinate[3];
-            for (int i = 5; i >= 0; i--)
+            int polje[6][7]={0};
+            int igrac = 1;
+            int UneseniStupac, RedZaUbacivanje = -1;
+            for (int i = 1; i <= 7; i++)
             {
-                for (int j = 1; j <= 7; j++)
+                printf("%d ", i);
+            }
+            printf("\n\n");
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
                 {
-                    char Koordinate = 'A' + i;
-                    printf("%c%d ", Koordinate, j);
+                    printf("🞅 ");
                 }
                 printf("\n");
             }
             printf("\n");
-            scanf("%s", &Unesene_Koordinate);
-            //printf("%s\n", Unesene_Koordinate);
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 1;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] == 1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] == 2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");  
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 2;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] ==1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] ==2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 1;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] == 1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] == 2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");  
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 2;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] ==1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] ==2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 1;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] == 1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] == 2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");  
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 2;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] ==1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] ==2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 1;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] == 1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] == 2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");  
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 2;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] ==1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] ==2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 1;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] == 1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] == 2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");  
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                    printf("\n");
+            }
+            scanf("%d", &UneseniStupac);
+            UneseniStupac -= 1;
+            printf("\n");
+            for (int i = 5; i >= 0; i--)
+            {
+                if (polje[i][UneseniStupac]==0)
+                {
+                    polje[i][UneseniStupac] = 2;
+                    RedZaUbacivanje = i;
+                    break;
+                }
+            }
+            for (int i = 1; i <= 7; i++)
+            {
+                printf("%d ", i);
+            }
+            printf("\n\n");
+
+            for (int i = 0; i < 6; i++)
+            {
+                for (int j = 0; j < 7; j++)
+                {
+                    if (polje[i][j] ==1)
+                    {
+                        printf("\033[0;31m🞅\033[0m ");
+                    }
+                    else if (polje[i][j] ==2)
+                    {
+                        printf("\033[0;34m🞅\033[0m ");
+                    }
+                    else
+                    {
+                        printf("🞅 ");
+                    }
+                }
+                printf("\n");
+            }
             
         }
-        else if (izbor == 2)
+          else if (izbor == 2)
         {
             printf("Upute:\n\n");
             printf("Ova je igra slična kao spoji 4, samo što sada moraš spojiti 5!\n\n");
@@ -44,8 +418,8 @@ int main()
             printf("3.:Dva igrača igraju naizmjenično.\n");
             printf("4.:Igrač bira stupac u koji želi ubaciti žeon, žeton se ne može baciti u stupac koji je pun!\n");
             printf("5.:Kada žeton padne, nije ga dopušteno pomicati.\n\n");
-            printf("Cilj igre: Pobjednik je igrač koji je spojio 5 žetona za redom, u bilo kojem smjeru.\n");
-            printf("Ako je cijela mreža ispunjena, igra završava neriješeno.\n\n");
+            printf("Cilj igre: Pobjednik je igrač koji je spojio 5 žetona za redom, u bilo kojem smjeru (dijagonali, redu ili stupcu).\n");
+            printf("Ako je cijela mreža ispunjena (i nitko nije spojio 5), igra završava neriješeno.\n\n");
             printf("SRETNO!!!");
         }
         else if (izbor == 3)
